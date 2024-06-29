@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Address Search</h1>
+        <form method="post">
+            <label for="address">Enter Address:</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit">Search</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                <h2>Search Result:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
